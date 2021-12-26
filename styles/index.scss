@@ -1,0 +1,66 @@
+@import "./reset";
+$container-width: 147px;
+$dna-diameter: 10px;
+$dna-space-bottom: 17px;
+
+.main-wrap {
+  min-height: 100vh;
+  background-color: #182852;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dna-row {
+  display: flex;
+  width: $container-width;
+  justify-content: space-between;
+  margin-bottom: $dna-space-bottom;
+}
+
+.dna-circle {
+  width: $dna-diameter;
+  height: $dna-diameter;
+  border-radius: 50%;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.dna-circle:nth-child(1) {
+  background-color: #75dfb3;
+  animation-name: trans-circle;
+}
+
+.dna-circle:nth-child(2) {
+  background-color: #ff5b5b;
+  animation-name: trans-circle-reverse;
+}
+
+/* iteration counts */
+
+@for $i from 2 through 18 {
+  .dna-row:nth-child(#{$i}) .dna-circle {
+    animation-delay: ($i / 20) - 0.1 * 1s;
+  }
+}
+
+@keyframes trans-circle-reverse {
+  0%,
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateX(-$container-width - $dna-diameter) scale(1);
+  }
+}
+
+@keyframes trans-circle {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX($container-width - $dna-diameter);
+  }
+}

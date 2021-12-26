@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.main-wrap {
+  min-height: 100vh;
+  background-color: #182852;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dna-row {
+  display: flex;
+  width: 147px;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+
+.dna-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.dna-circle:nth-child(1) {
+  background-color: #75dfb3;
+  animation-name: trans-circle;
+}
+
+.dna-circle:nth-child(2) {
+  background-color: #ff5b5b;
+  animation-name: trans-circle-reverse;
+}
+
+/* iteration counts */
+.dna-row:nth-child(2) .dna-circle {
+  animation-delay: 0s;
+}
+
+.dna-row:nth-child(3) .dna-circle {
+  animation-delay: 0.05s;
+}
+
+.dna-row:nth-child(4) .dna-circle {
+  animation-delay: 0.1s;
+}
+
+.dna-row:nth-child(5) .dna-circle {
+  animation-delay: 0.15s;
+}
+
+.dna-row:nth-child(6) .dna-circle {
+  animation-delay: 0.2s;
+}
+
+.dna-row:nth-child(7) .dna-circle {
+  animation-delay: 0.25s;
+}
+
+.dna-row:nth-child(8) .dna-circle {
+  animation-delay: 0.3s;
+}
+
+.dna-row:nth-child(9) .dna-circle {
+  animation-delay: 0.35s;
+}
+
+.dna-row:nth-child(10) .dna-circle {
+  animation-delay: 0.4s;
+}
+
+.dna-row:nth-child(11) .dna-circle {
+  animation-delay: 0.45s;
+}
+
+.dna-row:nth-child(12) .dna-circle {
+  animation-delay: 0.5s;
+}
+
+.dna-row:nth-child(13) .dna-circle {
+  animation-delay: 0.55s;
+}
+
+.dna-row:nth-child(14) .dna-circle {
+  animation-delay: 0.6s;
+}
+
+.dna-row:nth-child(15) .dna-circle {
+  animation-delay: 0.65s;
+}
+
+.dna-row:nth-child(16) .dna-circle {
+  animation-delay: 0.7s;
+}
+
+.dna-row:nth-child(17) .dna-circle {
+  animation-delay: 0.75s;
+}
+
+.dna-row:nth-child(18) .dna-circle {
+  animation-delay: 0.8s;
+}
+
+@keyframes trans-circle-reverse {
+  0%,
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateX(-157px) scale(1);
+  }
+}
+
+@keyframes trans-circle {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(137px);
+  }
+}
